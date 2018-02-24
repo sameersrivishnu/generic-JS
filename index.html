@@ -1,0 +1,79 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+<title>Generic Form </title>
+</head>
+<body>
+<form name="form" method="post" action="" onsubmit="return valid()" >
+<table>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">Application Form:
+    </div>
+    
+  </div>
+</nav>
+<tr><td>Name: </td><td> <input type="text" id="name" name="fullname"  placeholder="Full Name" class="formcontrol" onblur="ctrl()"><br><span id="nameerror" ></span></td></tr>
+
+	<tr><td>Email:</td><td> <input type="text" id="email"  placeholder="eg:xyz@gmail.com" class="formcontrol" onblur="ctrl()"><span id="emailerror"></span></td></tr>
+
+<tr><td>Password:</td><td> <input type="password" placeholder="eg:Example@123" name="pass" class="formcontrol" id="pwd" onblur="ctrl()" ><span id="pwderror"></span></td>
+	</tr>
+	<tr>
+<td>Qualification:</td>
+<td><select input type="dropdown"  name="qual" id="qualification" class="formcontrol" onblur="ctrl()">
+    <option value="">Select</option>  
+    <option value="inter">SSC/Intermediate</option>  
+    <option value="ug">B.Tech/Degree</option>  
+    <option value="pg">MCA/M.Tech</option>
+    <option value="others">Others</option>  
+</select>  
+<span id="qualificationerror"></span></td> 
+</tr>
+<tr><td>Gender:</td><td> <input type="radio" name="gen" class="formcontrol"  id="maleid" onblur="ctrl()">male
+ <input type="radio" name="gen"  id="femaleid" >female<span id="gendererror"></span></td>
+</tr>   
+
+<tr><td>Course:</td><td><input type="checkbox" name="course" class="formcontrol" id="front" onblur="ctrl()">Front end
+	<input type="checkbox" name="course" id="back">Back end
+	<span id="courseerror"></span></td>
+	
+</tr>
+<tr><td>Technologies:</td><td><select  name="techno" id="tech" size="4" multiple="multiple"  class="formcontrol" onblur="ctrl()">
+	<option value="html">HTML&CSS</option>
+	<option value="boot">Bootstrap</option>
+	<option value="js">JavaScript/Jquery</option>
+	<option value="php">PHP/Android</option>
+	<option value="data">MySQL/Oracle</option>
+</select><span id="techerror"></span>
+</td>
+</tr>
+<tr><td>Comments:</td><td><textarea rows="5" cols="34" id="text" class="form-control" style="resize:none;" onblur="ctrl()"></textarea>
+<span id="texterror"></span></td>
+</tr>
+<tr>					<td>Date & Time:</td>
+						<td>
+							<input type="date"  id="dateid" class="formcontrol" onblur="ctrl()" ><span id="dateerror" ></span>
+								
+						
+							<input type="time" id="timeid" class="formcontrol" style="margin-left: 0%" onblur="ctrl()">(hh:mm:AM/PM)
+							<span id="timeerror"></span>
+						</td>
+					</tr>
+<tr> 
+                    	<td>
+                    		<input type="checkbox" style="margin-left:70px;" value="" class="formcontrol" id="terms" ></td>
+                      	<td style="margin-left:-80px">I Agree to Privacy Policy<span id="termserror"></span></td>
+                      
+                  	</tr>
+</table>
+<input type="submit"  id="sub" value="Submit">
+</form>
+</body>
+<script type="text/javascript" src="assets/js/script.js"></script> 
+</html>
